@@ -2,7 +2,33 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!--Updated from JQUERY start here-->
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!--Updated for this labwork-->
+    <!-- Updated CSS and JavaScript ref -->
     <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/databaseHandler.js"></script>
+    <script type="text/javascript" src="scripts/usersHandler.js"></script>
+    <script type="text/javascript" src="mobileui/mobileui.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script>
+        document.addEventListener('openPage', function (e) {
+            addUser()
+        })
+    </script>
     <meta name="format-detection" content="telephone=no">
     <meta charset="utf-8">
     <meta name="msapplication-tap-highlight" content="no">
@@ -10,7 +36,9 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Profile App</title>
 </head>
-<body class="blue-50" style="background-image:url('/www/images/aurora.jpg')">  
+<body class="blue-50" style="background-image:url('/www/images/aurora.jpg')">
+
+    
     <div class="space"></div>
     <div class="row-around">
         <div class="col-80">
@@ -31,22 +59,29 @@
     <div class="space"></div>
     <div class="space"></div>
     <div class="row-around">
+
+   
+
+
         <div class="col-80">
             <div class="list" style="border:none">
                 <div class="item label-fixed">
-                    <label style="color:white">Username</label>
-                    <input type="text" />
+                    <label for="txtuserName" style="color:white">Username</label>
+                    <input type="text" id="txtuserName" style="color:white"/>
                 </div>
                 <div class="item label-fixed">
-                    <label style="color:white">Password</label>
-                    <input type="password">
+                    <label for="txtpassWord" style="color:white">Password</label>
+                    <input type="password" id="txtpassWord" style="color:white"/>
                 </div>
                 <div>
                     <button style="color:white" class="radius full" class="item" onclick="openPage('myProfileApp')">Login user</button>
                 </div>
             </div>
         </div>
+
+
     </div>
+
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="mobileui/mobileui.js"></script>
